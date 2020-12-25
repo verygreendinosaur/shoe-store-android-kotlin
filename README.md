@@ -19,6 +19,22 @@ Steps
 
 8. Create a new Welcome screen destination that includes:
 
+[DONE] A new layout
+[DONE] At least 2 textviews and use any text you would like
+[DONE] A navigation button with actions to navigate to the instructions screen
+
+9. Create a new Instruction destination that includes:
+
 [ ] A new layout
-[ ] At least 2 textviews and use any text you would like
-[ ] A navigation button with actions to navigate to the instructions screen
+[ ] At least 2 textviews with appropriate information
+[ ] A navigation button with actions to navigate to the shoe list screen
+
+10. Create a class that extends ViewModel
+
+[ ] Use a LiveData field that returns the list of shoes
+
+11. Create a new Shoe List destination that includes:
+[ ] A new layout
+[ ] A ScrollView
+[ ] A LinearLayout inside the ScrollView for Shoe Items
+[ ] A FloatingActionButton with an action to navigate to the shoe detail screen
