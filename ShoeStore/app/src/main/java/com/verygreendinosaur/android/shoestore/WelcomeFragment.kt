@@ -17,18 +17,19 @@ class WelcomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_welcome, container, false)
+        binding =
+            DataBindingUtil.inflate(layoutInflater, R.layout.fragment_welcome, container, false)
 
         setupButtons()
         return binding.root
     }
 
     private fun setupButtons() {
-        binding.button2.setOnClickListener{ navigateToInstructions(it) }
+        binding.howToShopButton.setOnClickListener { navigateToInstructions(it) }
     }
 
     private fun navigateToInstructions(v: View) {
-        // v.findNavController().navigate(R.id.action_welcomeFragment_to_instructionsFragment)
+        v.findNavController().navigate(R.id.action_welcomeFragment_to_instructionsFragment)
     }
 
 }

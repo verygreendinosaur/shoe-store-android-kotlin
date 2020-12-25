@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(
-            this, R.layout.activity_main)
+            this, R.layout.activity_main
+        )
 
         setSupportActionBar(findViewById(R.id.toolbar))
     }

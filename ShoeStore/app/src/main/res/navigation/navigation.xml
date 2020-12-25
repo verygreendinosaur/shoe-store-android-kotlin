@@ -9,7 +9,7 @@
         android:id="@+id/loginFragment"
         android:name="com.verygreendinosaur.android.shoestore.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment" />
@@ -18,7 +18,7 @@
         android:id="@+id/welcomeFragment"
         android:name="com.verygreendinosaur.android.shoestore.WelcomeFragment"
         android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" >
+        tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
             app:destination="@id/instructionsFragment" />
