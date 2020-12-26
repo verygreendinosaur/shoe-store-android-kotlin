@@ -14,4 +14,14 @@
     <string name="welcome_headline">Just shoes, without the fuss.</string>
     <string name="welcome_description">Welcome to the private beta of ShoeStore. We welcome your feedback as we work to make sure your shopping experience is fantastic.</string>
     <string name="button_how_to_shop">HOW TO SHOP</string>
+
+    <!-- Instructions -->
+    <string name="instructions_first">On the next screen you\'ll see a list of all shoes currently in stock. </string>
+    <string name="instructions_second">Tap on each to view more information about that shoe. From there you can tap edit to update the shoe details.</string>
+    <string name="instructions_third">While in edit mode, you can choose to Save or Cancel your edits.</string>
+    <string name="instructions_first_symbol">1</string>
+    <string name="instructions_second_symbol">2</string>
+    <string name="instructions_third_symbol">3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

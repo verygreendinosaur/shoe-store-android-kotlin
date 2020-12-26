@@ -27,5 +27,28 @@
         android:id="@+id/instructionsFragment"
         android:name="com.verygreendinosaur.android.shoestore.InstructionsFragment"
         android:label="fragment_instructions"
-        tools:layout="@layout/fragment_instructions" />
+        tools:layout="@layout/fragment_instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoesFragment"
+            app:destination="@id/shoesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoesFragment"
+        android:name="com.verygreendinosaur.android.shoestore.ShoesFragment"
+        android:label="fragment_shoes"
+        tools:layout="@layout/fragment_shoes" >
+        <action
+            android:id="@+id/action_shoesFragment_to_shoeDetailsFragment"
+            app:destination="@id/shoeDetailsFragment" />
+        <argument
+            android:name="newShoe"
+            app:argType="com.verygreendinosaur.android.shoestore.Shoe"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailsFragment"
+        android:name="com.verygreendinosaur.android.shoestore.ShoeDetailsFragment"
+        android:label="fragment_shoe_details"
+        tools:layout="@layout/fragment_shoe_details" />
 </navigation>

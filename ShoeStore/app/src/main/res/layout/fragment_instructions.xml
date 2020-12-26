@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".InstructionsFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <variable
+            name="instructionsOne"
+            type="String" />
+
+        <variable
+            name="instructionsOneNumber"
+            type="String" />
+
+        <variable
+            name="instructionsTwo"
+            type="String" />
+
+        <variable
+            name="instructionsTwoNumber"
+            type="String" />
+
+        <variable
+            name="instructionsThree"
+            type="String" />
+
+        <variable
+            name="instructionsThreeNumber"
+            type="String" />
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="HELLO WORLD" />
+        tools:context=".InstructionsFragment">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:minWidth="260dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcome_header_text_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:text="How to shop"
+                android:textSize="22sp"
+                bind:layout_constraintStart_toStartOf="parent"
+                bind:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                layout="@layout/content_instruction_line"
+                bind:numberText="@{instructionsOneNumber}"
+                bind:text="@{instructionsOne}" />
+
+            <include
+                layout="@layout/content_instruction_line"
+                bind:numberText="@{instructionsTwoNumber}"
+                bind:text="@{instructionsTwo}" />
+
+            <include
+                layout="@layout/content_instruction_line"
+                bind:numberText="@{instructionsThreeNumber}"
+                bind:text="@{instructionsThree}" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:text="Let's Get Started" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>
