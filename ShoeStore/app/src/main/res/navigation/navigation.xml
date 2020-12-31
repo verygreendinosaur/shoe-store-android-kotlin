@@ -50,5 +50,18 @@
         android:id="@+id/shoeDetailsFragment"
         android:name="com.verygreendinosaur.android.shoestore.ShoeDetailsFragment"
         android:label="fragment_shoe_details"
-        tools:layout="@layout/fragment_shoe_details" />
+        tools:layout="@layout/fragment_shoe_details" >
+        <action
+            android:id="@+id/action_shoeDetailsFragment_to_shoesFragment"
+            app:destination="@id/shoesFragment" />
+        <argument
+            android:name="newShoe"
+            app:argType="com.verygreendinosaur.android.shoestore.Shoe"
+            app:nullable="true" />
+
+    </fragment>
+
+
+
+
 </navigation>

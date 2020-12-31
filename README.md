@@ -40,17 +40,17 @@ Steps
 [DONE] A LinearLayout inside the ScrollView for Shoe Items
 [DONE] A FloatingActionButton with an action to navigate to the shoe detail screen
 
-12. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration [ ]
-13. In MainActivity, add a Logout menu to return to the login screen [ ]
-14. Create a new Shoe Detail destination that includes: [ ]
+12. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration [DONE]
+13. In MainActivity, add a Logout menu to return to the login screen [DONE]
+14. Create a new Shoe Detail destination that includes: [DONE]
 
-[ ] A new layout
-[ ] A TextView label and EditView for the Shoe Name, Company, Shoe Size and Description
-[ ] A Cancel button with an action to navigate back to the shoe list screen
-[ ] A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
+[DONE] A new layout
+[DONE] A TextView label and EditView for the Shoe Name, Company, Shoe Size and Description
+[DONE] A Cancel button with an action to navigate back to the shoe list screen
+[DONE] A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
 
-15. Make sure you can’t go back to onboarding screens In the Shoe List screen: [ ]
+15. Make sure you can’t go back to onboarding screens In the Shoe List screen: [DONE]
 
-[ ] Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
-[ ] Observe the shoes variable from the ViewModel
-[ ] Add a new layout item into the scrollview for each shoe.
+[DONE] Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
+[DONE] Observe the shoes variable from the ViewModel
+[DONE] Add a new layout item into the scrollview for each shoe.
