@@ -2,10 +2,8 @@ package com.verygreendinosaur.android.shoestore
 
 import android.content.Context
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
@@ -33,6 +31,7 @@ class ShoesFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
         loadShoes()
     }
 
@@ -40,7 +39,6 @@ class ShoesFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoes, container, false)
         setupButtons()
         return binding.root
@@ -74,4 +72,29 @@ class ShoesFragment : Fragment() {
         v.findNavController().navigate(R.id.action_shoesFragment_to_shoeDetailsFragment)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_main, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return when (item.itemId) {
+            R.id.action_logout -> logout()
+            else -> super.onOptionsItemSelected(item)
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun logout(): Boolean {
+        restartActivity()
+        return true
+    }
+
+    private fun restartActivity() {
+        val intent = activity?.intent
+        activity?.finish()
+        startActivity(intent)
+    }
 }

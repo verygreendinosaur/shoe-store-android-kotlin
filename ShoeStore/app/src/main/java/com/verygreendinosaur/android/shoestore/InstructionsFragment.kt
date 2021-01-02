@@ -17,6 +17,8 @@ class InstructionsFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(false)
+
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_instructions, container, false)
 
         setupText()

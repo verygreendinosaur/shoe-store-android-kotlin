@@ -36,22 +36,22 @@ class ShoeDetailsFragment : Fragment() {
     }
 
     private fun buildShoe(): Shoe? {
-        val name = binding.nameTextView.text.toString()
+        val name = binding.name
         if (name.isNullOrEmpty()) {
             return null
         }
 
-        val company = binding.companyTextView.text.toString()
+        val company = binding.company
         if (company.isNullOrEmpty()) {
             return null
         }
 
-        val description = binding.descriptionTextView.text.toString()
+        val description = binding.description
         if (description.isNullOrEmpty()) {
             return null
         }
 
-        val size = binding.sizeTextView.text.toString().toDoubleOrNull() ?: return null
+        val size = binding.size?.toDoubleOrNull() ?: return null
 
         return Shoe(name, company, size, description)
     }

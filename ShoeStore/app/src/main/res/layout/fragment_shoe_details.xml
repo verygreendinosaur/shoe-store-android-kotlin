@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+        <variable
+            name="name"
+            type="String" />
+        <variable
+            name="company"
+            type="String" />
+        <variable
+            name="description"
+            type="String" />
+        <variable
+            name="size"
+            type="String" />
+    </data>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,7 +40,8 @@
                 android:id="@+id/name_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minWidth="260dp" />
+                android:minWidth="260dp"
+                android:text="@{name}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -44,7 +60,8 @@
                 android:id="@+id/company_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="14dp" />
+                android:layout_marginBottom="14dp"
+                android:text="@{company}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -63,7 +80,8 @@
                 android:id="@+id/size_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="14dp" />
+                android:layout_marginBottom="14dp"
+                android:text="@{size}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -82,7 +100,8 @@
                 android:id="@+id/description_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="14dp" />
+                android:layout_marginBottom="14dp"
+                android:text="@{description}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout

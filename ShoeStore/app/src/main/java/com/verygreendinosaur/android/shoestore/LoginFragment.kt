@@ -17,6 +17,8 @@ class LoginFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(false)
+
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_login, container, false)
 
         setupButtons()
