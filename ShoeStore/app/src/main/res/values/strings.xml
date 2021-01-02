@@ -24,4 +24,10 @@
     <string name="instructions_first_symbol">1</string>
     <string name="instructions_second_symbol">2</string>
     <string name="instructions_third_symbol">3</string>
+    <string name="how_to_shop_title">How to shop</string>
+    <string name="start_button_text">Let\'s Get Started</string>
+    <string name="name_label_text">Name</string>
+    <string name="company_label_text">Company</string>
+    <string name="size_label_text">Size</string>
+    <string name="description_label_text">Description</string>
 </resources>

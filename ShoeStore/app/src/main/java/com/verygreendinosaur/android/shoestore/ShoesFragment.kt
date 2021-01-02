@@ -10,9 +10,7 @@ import android.widget.TextView
 import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.verygreendinosaur.android.shoestore.databinding.FragmentShoesBinding
@@ -21,12 +19,10 @@ import kotlinx.android.synthetic.main.fragment_shoes.*
 class ShoesFragment : Fragment() {
 
     private val viewModel: ShoesViewModel by activityViewModels()
-    val args: ShoesFragmentArgs by navArgs()
-
-
-
 
     lateinit var binding: FragmentShoesBinding
+
+    val args: ShoesFragmentArgs by navArgs()
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -51,22 +47,18 @@ class ShoesFragment : Fragment() {
     }
 
     private fun loadShoes() {
-
         val model = viewModel
-//        val model: ShoesViewModel by viewModels()
-
         val shoe = args.newShoe
+        val shoesObserver = Observer<List<Shoe>> { setupShoesList(it) }
+
         if (shoe != null) {
             model.add(shoe)
         }
 
-        val shoesObserver = Observer<List<Shoe>> { setupShoesList(it) }
         model.shoesLiveData.observe(this, shoesObserver)
     }
 
     private fun setupShoesList(shoes: List<Shoe>) {
-        //scroll_content_layout.removeAllViews()
-
         shoes.forEach {
             val entry = TextView(context)
             entry.text = it.formattedForDisplay()

@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
                 android:fontFamily="@font/roboto_slab_bold"
-                android:text="How to shop"
+                android:text="@string/how_to_shop_title"
                 android:textSize="22sp"
                 bind:layout_constraintStart_toStartOf="parent"
                 bind:layout_constraintTop_toTopOf="parent" />
@@ -69,12 +69,12 @@
                 bind:text="@{instructionsThree}" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/start_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="100dp"
-                android:text="Let's Get Started" />
+                android:text="@string/start_button_text" />
         </LinearLayout>
 
     </FrameLayout>

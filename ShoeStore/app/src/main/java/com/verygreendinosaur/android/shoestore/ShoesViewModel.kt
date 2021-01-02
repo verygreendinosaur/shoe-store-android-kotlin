@@ -17,7 +17,6 @@ class ShoesViewModel : ViewModel() {
     )
 
     init {
-
         shoesLiveData.value = shoes
     }
 

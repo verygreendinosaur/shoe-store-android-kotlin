@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:labelFor="@id/name_text_input"
-            android:text="Name" />
+            android:text="@string/name_label_text" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name_text_input"
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:labelFor="@id/company_text_input"
-            android:text="Company" />
+            android:text="@string/company_label_text" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/company_text_input"
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:labelFor="@id/shoe_size_text_input"
-            android:text="Size" />
+            android:text="@string/size_label_text" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/shoe_size_text_input"
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:labelFor="@id/description_text_input"
-            android:text="Description" />
+            android:text="@string/description_label_text" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/description_text_input"
