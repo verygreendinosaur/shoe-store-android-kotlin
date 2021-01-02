@@ -37,7 +37,7 @@ class InstructionsFragment : Fragment() {
     }
 
     private fun setupButtons() {
-        binding.button2.setOnClickListener{ navigateToInstructions(it) }
+        binding.button2.setOnClickListener { navigateToInstructions(it) }
     }
 
     private fun navigateToInstructions(v: View) {

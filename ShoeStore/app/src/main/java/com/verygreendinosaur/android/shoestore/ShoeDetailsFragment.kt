@@ -1,18 +1,27 @@
 package com.verygreendinosaur.android.shoestore
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.verygreendinosaur.android.shoestore.databinding.FragmentShoeDetailsBinding
-
 
 class ShoeDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeDetailsBinding
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoesFragment)
+        }
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -28,13 +37,19 @@ class ShoeDetailsFragment : Fragment() {
 
     private fun buildShoe(): Shoe? {
         val name = binding.nameTextView.text.toString()
-        if (name.isNullOrEmpty()) { return null }
+        if (name.isNullOrEmpty()) {
+            return null
+        }
 
         val company = binding.companyTextView.text.toString()
-        if (company.isNullOrEmpty()) { return null }
+        if (company.isNullOrEmpty()) {
+            return null
+        }
 
         val description = binding.descriptionTextView.text.toString()
-        if (description.isNullOrEmpty()) { return null }
+        if (description.isNullOrEmpty()) {
+            return null
+        }
 
         val size = binding.sizeTextView.text.toString().toDoubleOrNull() ?: return null
 
