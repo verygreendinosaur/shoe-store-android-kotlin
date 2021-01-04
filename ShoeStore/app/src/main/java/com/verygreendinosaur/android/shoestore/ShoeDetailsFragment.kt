@@ -31,8 +31,10 @@ class ShoeDetailsFragment : Fragment() {
     }
 
     private fun setupButtons() {
-        binding.cancelButton.setOnClickListener { navigateToShoesOnCancel(it) }
-        binding.saveButton.setOnClickListener { navigateToShoesOnSave(it) }
+        with(binding) {
+            cancelButton.setOnClickListener { navigateToShoesOnCancel(it) }
+            saveButton.setOnClickListener { navigateToShoesOnSave(it) }
+        }
     }
 
     private fun buildShoe(): Shoe? {

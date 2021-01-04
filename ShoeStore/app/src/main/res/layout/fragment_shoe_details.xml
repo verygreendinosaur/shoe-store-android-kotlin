@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minWidth="260dp"
-                android:text="@{name}"/>
+                android:text="@={name}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
-                android:text="@{company}" />
+                android:text="@={company}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
-                android:text="@{size}" />
+                android:text="@={size}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -101,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
-                android:text="@{description}" />
+                android:text="@={description}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout

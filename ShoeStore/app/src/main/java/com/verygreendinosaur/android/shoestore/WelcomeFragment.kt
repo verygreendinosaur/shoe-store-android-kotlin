@@ -13,12 +13,6 @@ class WelcomeFragment : Fragment() {
 
     private lateinit var binding: FragmentWelcomeBinding
 
-
-//    public void onCreate(@Nullable Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setHasOptionsMenu(true);
-//    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(false)

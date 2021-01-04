@@ -28,14 +28,16 @@ class InstructionsFragment : Fragment() {
     }
 
     private fun setupText() {
-        binding.instructionsOne = getString(R.string.instructions_first)
-        binding.instructionsOneNumber = getString(R.string.instructions_first_symbol)
+        with(binding) {
+            instructionsOne = getString(R.string.instructions_first)
+            instructionsOneNumber = getString(R.string.instructions_first_symbol)
 
-        binding.instructionsTwo = getString(R.string.instructions_second)
-        binding.instructionsTwoNumber = getString(R.string.instructions_second_symbol)
+            instructionsTwo = getString(R.string.instructions_second)
+            instructionsTwoNumber = getString(R.string.instructions_second_symbol)
 
-        binding.instructionsThree = getString(R.string.instructions_third)
-        binding.instructionsThreeNumber = getString(R.string.instructions_third_symbol)
+            instructionsThree = getString(R.string.instructions_third)
+            instructionsThreeNumber = getString(R.string.instructions_third_symbol)
+        }
     }
 
     private fun setupButtons() {

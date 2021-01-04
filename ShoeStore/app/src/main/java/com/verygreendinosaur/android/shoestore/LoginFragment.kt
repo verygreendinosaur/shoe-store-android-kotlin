@@ -26,8 +26,10 @@ class LoginFragment : Fragment() {
     }
 
     private fun setupButtons() {
-        binding.signInButton.setOnClickListener { navigateToWelcome(it) }
-        binding.createAccountButton.setOnClickListener { navigateToWelcome(it) }
+        with(binding) {
+            signInButton.setOnClickListener { navigateToWelcome(it) }
+            createAccountButton.setOnClickListener { navigateToWelcome(it) }
+        }
     }
 
     private fun navigateToWelcome(v: View) {
