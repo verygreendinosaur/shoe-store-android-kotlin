@@ -35,6 +35,10 @@
         android:layout_height="match_parent"
         tools:context=".InstructionsFragment">
 
+        <!-- We use a LinearLayout here since it seems well suited to this
+         simple layout. There are a limited number of UI components we anticipate
+         displaying and they flow in a single axis. -->
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

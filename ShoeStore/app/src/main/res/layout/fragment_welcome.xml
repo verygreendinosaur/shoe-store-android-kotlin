@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- In spirit this is a fairly similar layout (visually) to the one
+    built for Instructions; we could likely refactor with a Linear Layout. However,
+    we use a ConstraintLayout here since the assignment calls for a new layout here
+    and admittedly, I wanted some practice with ConstraintLayout/constraints. -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

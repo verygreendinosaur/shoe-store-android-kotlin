@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- We use a LinearLayout here since this is a fairly simple view -
+    similar UI elements flowing across a single axis. No need to
+    specify complex constraints. For a better landscape/tablet
+    experience we could consider a Constraint Layout, but I wanted to
+    keep this simple for now. -->
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

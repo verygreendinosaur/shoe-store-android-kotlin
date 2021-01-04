@@ -16,6 +16,12 @@
             type="String" />
     </data>
 
+    <!-- We use a (nested) LinearLayout here since this view has some complexity
+    but can be divided into two simpler LinearLayouts - a vertically-flowing series of similar
+    views followed by a single horizontally-oriented button row, which is also a Linear
+    Layout. We could go an extra step and extract the bottom Linear Layout into its own
+    reusable content layout, but I didn't want to get too fancy. -->
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

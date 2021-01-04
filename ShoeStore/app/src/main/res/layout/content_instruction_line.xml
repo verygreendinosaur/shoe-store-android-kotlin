@@ -5,11 +5,14 @@
         <variable
             name="numberText"
             type="String" />
-
         <variable
             name="text"
             type="String" />
     </data>
+
+    <!-- We use a LinearLayout here since this is a simple subview -
+    two similar UI elements flowing across a single axis. No need to
+    specify complex constraints at this time. -->
 
     <LinearLayout
         android:layout_width="match_parent"
