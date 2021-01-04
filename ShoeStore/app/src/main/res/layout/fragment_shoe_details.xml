@@ -20,7 +20,9 @@
     but can be divided into two simpler LinearLayouts - a vertically-flowing series of similar
     views followed by a single horizontally-oriented button row, which is also a Linear
     Layout. We could go an extra step and extract the bottom Linear Layout into its own
-    reusable content layout, but I didn't want to get too fancy. -->
+    reusable content layout, but I didn't want to get too fancy. If I found myself nesting or
+    combining more than 2 LinearLayouts, I'd consider using alternatives/Constraint Layout to avoid
+    rendering overhead. -->
 
     <LinearLayout
         android:layout_width="wrap_content"
