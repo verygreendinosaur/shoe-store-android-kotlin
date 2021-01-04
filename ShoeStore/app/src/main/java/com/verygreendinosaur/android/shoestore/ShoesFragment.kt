@@ -17,11 +17,10 @@ import kotlinx.android.synthetic.main.fragment_shoes.*
 class ShoesFragment : Fragment() {
 
     private val viewModel: ShoesViewModel by activityViewModels()
+    private val args: ShoesFragmentArgs by navArgs()
 
     lateinit var binding: FragmentShoesBinding
-
-    val args: ShoesFragmentArgs by navArgs()
-
+    
     override fun onAttach(context: Context) {
         super.onAttach(context)
         requireActivity().onBackPressedDispatcher.addCallback(this) {
@@ -78,13 +77,10 @@ class ShoesFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         return when (item.itemId) {
             R.id.action_logout -> logout()
             else -> super.onOptionsItemSelected(item)
         }
-
-        return super.onOptionsItemSelected(item)
     }
 
     private fun logout(): Boolean {
